@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "e8e25673-3645-450d-89d3-289c4900658c",
+		"name": "310",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "Get all recipes",
+					"_postman_id": "b0edc3d7-12f9-4383-861b-8516dd3c95ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "{{baseurl}}/recipes"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new recipe",
+					"_postman_id": "1e276896-2aeb-4dc0-84b9-82bdd51d4d17",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"Chocolate Brownies\",\r\n\"diet\": \"\",\r\n\"tags\": [\"Dessert\", \"Brownies\", \"Chocolate\"],\r\n\"introduction\": \"Indulge in the rich and fudgy goodness of homemade Chocolate Brownies. This recipe...\",\r\n\"imageUrl\": \"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001464_11-ed687dd.jpg?quality=90&webp=true&resize=300,272\",\r\n\"ingredients\": [\r\n\"185g unsalted butter\",\r\n\"185g best dark chocolate\",\r\n\"85g plain flour\",\r\n\"40g cocoa powder\",\r\n\"50g white chocolate\",\r\n\"50g milk chocolate\",\r\n\"3 large eggs\",\r\n\"275g golden caster sugar\"\r\n],\r\n\"cuisine\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/recipes"
+					},
+					"response": []
+				},
+				{
+					"name": "Get recipes by name (search)",
+					"_postman_id": "ce78820c-b424-4808-b711-fe32ff90b869",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/recipes/search?name=Vegan Pizza",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"recipes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Vegan Pizza"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get random recipes",
+					"_postman_id": "1e7756f7-21df-44f9-be60-7e74763b2413",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/recipes/random"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a recipe by ID",
+					"_postman_id": "48c7b23f-4b9d-4c9d-8ec2-340d29d7c523",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/recipes/646f9f970c69da635e9f7ef9"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a recipe",
+					"_postman_id": "669fbbca-227a-4674-869d-10f9b4db451d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseurl}}/recipes/646f8f3a06ecd85102356763"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "e7039b82-08f4-4161-8d96-6943b05425a7"
+		},
+		{
+			"name": "Cuisines",
+			"item": [
+				{
+					"name": "Get all cuisines",
+					"_postman_id": "4f1f8bc9-0acf-4fd3-9ede-20c089f639e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/cuisines"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all recipes by cuisine",
+					"_postman_id": "a67c8bcc-ff87-4a11-a1b8-469b3557a94a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/cuisines/Japanese"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "0e7cf7ff-c80b-4b4e-9db3-6bbe0ff659f8"
+		},
+		{
+			"name": "Diet",
+			"item": [
+				{
+					"name": "Get all diets",
+					"_postman_id": "1763867e-f26d-4bc7-bcbf-3af629720484",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/diets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all recipes by diets",
+					"_postman_id": "ca821d8a-68ac-49cc-8cf3-da5a194283f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "diet",
+								"value": "vegetarian",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/diets/Vegetarian"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6509dc7a-e336-4f73-a596-cd9d9969539b"
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Get all tags",
+					"_postman_id": "4c531bcf-6d15-4441-8329-b10fc74a9219",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "Get recipes by tags (search)",
+					"_postman_id": "07cf90c0-17f1-44a6-aa6e-24f2a7e83bf5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/tags/searchByTags?tags=Pasta,Sushi",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"tags",
+								"searchByTags"
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": "Pasta,Sushi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "ed3a65c0-99dc-4a3f-9c3a-dc7acbc5c4b9"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "706dcb29-b107-4de0-a9ff-e3715c5d5b71",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2d84684e-2c74-4e2a-9fdb-5e546eef9a38",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6bd7be29-93b4-4b38-a526-335235d03c7a",
+			"key": "baseurl",
+			"value": "localhost:8080/cookr",
+			"type": "string"
+		}
+	]
+}
