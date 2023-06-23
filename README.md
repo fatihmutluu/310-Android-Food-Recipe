@@ -1,6 +1,6 @@
 ## Cookr - Recipe Recommendation Android Application
 
-<img src="https://media.discordapp.net/attachments/238684365930889216/1114702780347711648/Cookr-removebg-preview.png?width=488&height=488" alt="Cookr Banner" align="left" width="200">
+<img src="https://i.hizliresim.com/rlqmx0f.png?width=488&height=488" alt="Cookr Banner" align="left" width="200">
 
 Cookr is a user-friendly Android application designed to provide recipe recommendations based on user-selected filters. Developed using the Spring framework for backend services and built in Android Studio, Cookr aims to simplify the process of finding delicious recipes for users of all cooking skill levels.
 
